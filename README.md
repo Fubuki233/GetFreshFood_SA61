@@ -15,7 +15,7 @@ cd "Your/Folder/Path/GetFreshFood_SA61"
 ```
 Now, all the files should be downloaded.
 
-## Push/Pull
+
 ## Push / Pull Workflow
 Before you start programming, always pull the latest code:
 
