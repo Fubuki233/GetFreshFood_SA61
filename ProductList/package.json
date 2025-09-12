@@ -1,0 +1,24 @@
+{
+  "name": "product-management-system",
+  "version": "1.0.0",
+  "description": "A web-based product management system with dynamic API integration",
+  "main": "api-server.js",
+  "scripts": {
+    "start": "node api-server.js",
+    "dev": "node api-server.js",
+    "serve": "python -m http.server 8000",
+    "serve-php": "php -S localhost:8000"
+  },
+  "keywords": [
+    "product-management",
+    "api",
+    "javascript",
+    "web",
+    "crud"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
