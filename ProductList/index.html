@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generated Page</title>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Management System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Source+Code+Pro:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="global.css">
+  <style id="sections-styles">
+/* CSS for section section:header */
+.site-header {
+  background-color: var(--color-background);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 100px;
+  gap: 24px;
+}
+
+.site-header__logo img {
+  width: 40px;
+  height: 35px;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.nav-list__link {
+  display: block;
+  padding: 8px;
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.nav-list__link:hover {
+  background-color: var(--color-background-alt);
+}
+
+.nav-list__link--active {
+  background-color: var(--color-background-alt);
+}
+
+.site-header__signin {
+  padding: 8px 12px;
+  font-size: 16px;
+  line-height: 1;
+  border: 1px solid var(--color-border-dark);
+  border-radius: 8px;
+  background-color: var(--color-button-bg);
+  white-space: nowrap;
+  transition: background-color 0.2s;
+}
+
+.site-header__signin:hover {
+    background-color: #d4d4d4;
+}
+
+@media (max-width: 1024px) {
+  .site-header__container {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+  .site-header__nav {
+    order: 3;
+    width: 100%;
+    margin-top: 16px;
+  }
+  .site-header__logo {
+    order: 1;
+  }
+  .site-header__signin {
+    order: 2;
+  }
+}
+
+/* CSS for section section:hero */
+.hero {
+  background-color: var(--color-background-alt);
+  padding: 160px 0;
+  text-align: center;
+}
+
+.hero__title {
+  font-size: 72px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -2.16px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 0;
+  }
+  .hero__title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 0;
+  }
+  .hero__title {
+    font-size: 36px;
+  }
+}
+
+/* CSS for section section:products */
+.products-section {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.products-section__controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 64px;
+}
+
+.search-bar {
+  display: flex;
+  gap: 10px;
+}
+
+.search-bar__input-wrapper {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 9999px;
+  padding: 12px 16px;
+  overflow: hidden;
+  background-color: var(--color-background);
+}
+
+.search-bar__input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+}
+
+.search-bar__clear {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search-bar__clear img {
+  width: 16px;
+  height: 16px;
+}
+
+.search-bar__button, .create-product-btn {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--color-black);
+  background-color: var(--color-background);
+  border: 2px solid var(--color-black);
+  cursor: pointer;
+  text-align: center;
+  height: 50px;
+  padding: 0 18px;
+}
+
+.search-bar__button {
+  flex-basis: 420px;
+}
+
+.create-product-btn {
+  width: 100%;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.product-card {
+  display: flex;
+  gap: 24px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.product-card__image {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  background-color: #f0f0f0;
+  flex-shrink: 0;
+  border-radius: 4px;
+}
+
+.product-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.product-card__text {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.product-card__title {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.48px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.product-card__description {
+  font-size: 16px;
+  color: var(--color-text-light);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.btn {
+  padding: 12px;
+  font-size: 16px;
+  line-height: 1;
+  border: 1px solid var(--color-border-dark);
+  border-radius: 8px;
+  background-color: var(--color-button-bg);
+  cursor: pointer;
+  align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+  .search-bar {
+    flex-direction: column;
+  }
+  .search-bar__button {
+    flex-basis: auto;
+  }
+  .product-card {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .search-bar__button, .create-product-btn {
+    font-size: 24px;
+  }
+}
+
+/* CSS for section section:footer */
+.site-footer {
+  background-color: var(--color-background);
+  border-top: 1px solid var(--color-border);
+  padding-top: 32px;
+  padding-bottom: 160px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  gap: 32px 16px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-column--brand {
+  gap: 24px;
+}
+
+.footer-logo img {
+  width: 23.33px;
+  height: 35px;
+}
+
+.social-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+  transition: opacity 0.2s;
+}
+.social-link:hover img {
+  opacity: 0.7;
+}
+
+.footer-heading {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin: 0 0 16px 0;
+}
+
+.footer-link-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-link-list a {
+  font-size: 16px;
+  line-height: 1.4;
+  transition: opacity 0.2s;
+}
+
+.footer-link-list a:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 992px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .footer-column--brand {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+  }
+}
+  </style>
+  <script src="global.js" defer></script>
+</head>
+<body>
+<section id="section-header">
+  <header class="site-header">
+    <div class="container site-header__container">
+      <a href="#" class="site-header__logo">
+        <img src="images/I2_2530_189_26921.svg" alt="Figma Logo">
+      </a>
+      <nav class="site-header__nav">
+        <ul class="nav-list">
+          <li class="nav-list__item"><a href="#" class="nav-list__link nav-list__link--active">Products</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Solutions</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Community</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Resources</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Pricing</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Contact</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Link</a></li>
+        </ul>
+      </nav>
+      <a href="#" class="site-header__signin">Sign in</a>
+    </div>
+  </header>
+</section>
+<section id="section-hero">
+  <div class="hero">
+    <div class="container">
+      <h1 class="hero__title">Product Management System</h1>
+    </div>
+  </div>
+</section>
+<section id="section-products" class="products-section">
+  <div class="container">
+    <div class="products-section__controls">
+      <div class="search-bar">
+        <div class="search-bar__input-wrapper">
+          <input type="text" class="search-bar__input" placeholder="Value">
+          <button class="search-bar__clear">
+            <img src="images/I7_6083_2236_15002.svg" alt="Clear search">
+          </button>
+        </div>
+        <button class="search-bar__button">Search</button>
+      </div>
+      <button class="create-product-btn">Create new product</button>
+    </div>
+
+    <div class="product-list">
+      <article class="product-card">
+        <img class="product-card__image" src="images/0707e6b2022462187b7b2dab43ed95bab6b24a66.png" alt="Product 1">
+        <div class="product-card__body">
+          <div class="product-card__text">
+            <h2 class="product-card__title">Product1</h2>
+            <p class="product-card__description">Here retreives the attributes of the product</p>
+          </div>
+          <div class="product-card__actions">
+            <button class="btn">Edit</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <img class="product-card__image" src="images/0707e6b2022462187b7b2dab43ed95bab6b24a66.png" alt="Product Title">
+        <div class="product-card__body">
+          <div class="product-card__text">
+            <h2 class="product-card__title">Title</h2>
+            <p class="product-card__description">Body text for whatever you’d like to say. Add main takeaway points, quotes, anecdotes, or even a very very short story.</p>
+          </div>
+          <div class="product-card__actions">
+            <button class="btn">Button</button>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+<section id="section-footer">
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-column footer-column--brand">
+        <a href="#" class="footer-logo">
+          <img src="images/I2_2535_189_27064.svg" alt="Figma Logo">
+        </a>
+        <div class="social-links">
+          <a href="#" class="social-link"><img src="images/I2_2535_325_12862.svg" alt="X"></a>
+          <a href="#" class="social-link"><img src="images/I2_2535_325_12998.svg" alt="Instagram"></a>
+          <a href="#" class="social-link"><img src="images/I2_2535_325_13119.svg" alt="YouTube"></a>
+          <a href="#" class="social-link"><img src="images/I2_2535_325_12716.svg" alt="LinkedIn"></a>
+        </div>
+      </div>
+      <div class="footer-column">
+        <h4 class="footer-heading">Use cases</h4>
+        <ul class="footer-link-list">
+          <li><a href="#">UI design</a></li>
+          <li><a href="#">UX design</a></li>
+          <li><a href="#">Wireframing</a></li>
+          <li><a href="#">Diagramming</a></li>
+          <li><a href="#">Brainstorming</a></li>
+          <li><a href="#">Online whiteboard</a></li>
+          <li><a href="#">Team collaboration</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4 class="footer-heading">Explore</h4>
+        <ul class="footer-link-list">
+          <li><a href="#">Design</a></li>
+          <li><a href="#">Prototyping</a></li>
+          <li><a href="#">Development features</a></li>
+          <li><a href="#">Design systems</a></li>
+          <li><a href="#">Collaboration features</a></li>
+          <li><a href="#">Design process</a></li>
+          <li><a href="#">FigJam</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4 class="footer-heading">Resources</h4>
+        <ul class="footer-link-list">
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Best practices</a></li>
+          <li><a href="#">Colors</a></li>
+          <li><a href="#">Color wheel</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Developers</a></li>
+          <li><a href="#">Resource library</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</section>
+</body>
+</html>

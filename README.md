@@ -3,7 +3,8 @@
 ## Git Configuration
 
 ### 1. Generate SSH Key
-
+Download Git:
+https://git-scm.com/downloads
 First, create an SSH key on your local machine:
 ![ad](https://www.runoob.com/wp-content/uploads/2014/05/github-account.jpg "abs")
 
